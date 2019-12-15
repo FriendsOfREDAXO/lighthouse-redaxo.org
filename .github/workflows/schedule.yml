@@ -1,5 +1,7 @@
 name: Lighthouse
-on: push
+on:
+  schedule:
+    - cron: '0 10 * * *'
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
@@ -9,13 +11,11 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            https://www.redaxo.org
+            https://www.redaxo.org/
             https://www.redaxo.org/cms/ueberblick/
             https://www.redaxo.org/doku/master
             https://www.redaxo.org/download/core/
           temporaryPublicStorage: true
-          env:
-            PR_NUMBER: ${{ github.event.pull_request.number }}
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
