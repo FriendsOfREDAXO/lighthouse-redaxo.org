@@ -14,8 +14,6 @@ jobs:
             https://www.redaxo.org/doku/master
             https://www.redaxo.org/download/core/
           temporaryPublicStorage: true
-          env:
-            PR_NUMBER: ${{ github.event.pull_request.number }}
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
