@@ -1,5 +1,6 @@
 name: Lighthouse
-on: push
+on: schedule
+  - cron: '0 12 * * *'
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
