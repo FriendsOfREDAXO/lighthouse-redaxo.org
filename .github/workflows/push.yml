@@ -9,7 +9,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            https://www.redaxo.org
+            https://www.redaxo.org/
             https://www.redaxo.org/cms/ueberblick/
             https://www.redaxo.org/doku/master
             https://www.redaxo.org/download/core/
